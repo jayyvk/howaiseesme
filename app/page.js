@@ -278,7 +278,7 @@ export default function Home() {
               value={queryText}
               onChange={(e) => setQueryText(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder='Describe what you see — "a happy person", "holding a phone"...'
+              placeholder='Type what you think AI sees – "a happy person", "wearing glasses" – and see if it agrees'
               style={{
                 flex: 1, padding: '9px 14px', fontSize: '13px', fontFamily: 'inherit',
                 background: '#f8f9fa', border: '1.5px solid #e5e7eb',
