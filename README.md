@@ -15,16 +15,6 @@ Type any description in the search bar — "a happy person", "someone wearing gl
 - **Web Worker** — ML runs off main thread
 - **MediaPipe Selfie Segmentation** — person detection for silhouette heatmap (falls back to brightness detection)
 
-## Deploy
-
-```bash
-git clone https://github.com/YOUR_USERNAME/clip-explorer.git
-cd clip-explorer
-npm install
-vercel
-```
-
-Or: push to GitHub → import in [vercel.com/new](https://vercel.com/new) → deploy. Zero config.
 
 ## Architecture
 
