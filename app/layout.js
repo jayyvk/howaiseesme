@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 export const metadata = {
   title: 'How AI Sees Me',
   description: 'Real-time CLIP vision embeddings in the browser',
@@ -12,7 +14,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+      <body style={{ margin: 0, padding: 0 }}>{children}<Analytics /></body>
     </html>
   );
 }
