@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'How AI Sees Me',
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body style={{ margin: 0, padding: 0 }}>{children}<Analytics /></body>
+      <body style={{ margin: 0, padding: 0 }}>{children}<Analytics/></body>
     </html>
   );
 }
