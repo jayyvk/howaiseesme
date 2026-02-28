@@ -253,6 +253,40 @@ export default function Home() {
     });
   }, [embedding, personMask]);
 
+  // Mobile detection
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div style={{
+        minHeight: '100vh', display: 'flex', flexDirection: 'column',
+        justifyContent: 'center', alignItems: 'center', padding: '32px',
+        fontFamily: "'IBM Plex Mono', monospace", background: '#e0e0e0',
+        textAlign: 'center',
+      }}>
+        <div style={{ fontSize: '32px', marginBottom: '16px' }}>💻</div>
+        <div style={{ fontSize: '14px', fontWeight: 600, color: '#0a0a0a', marginBottom: '8px' }}>
+          open on a laptop
+        </div>
+        <div style={{ fontSize: '11px', color: '#666', lineHeight: '18px', maxWidth: '280px' }}>
+          this runs a vision model in your browser — needs a webcam and more memory than most phones have
+        </div>
+        <div style={{ fontSize: '9px', color: '#333', marginTop: '24px', letterSpacing: '2px' }}>
+          HOWAISEESME.COM
+        </div>
+        <div style={{ fontSize: '8px', color: '#333', marginTop: '8px' }}>
+          no matter how advanced AI gets, you're still just numbers to it
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div style={{
       background: '#fff', height: '100vh', width: '100vw',
@@ -278,7 +312,7 @@ export default function Home() {
               value={queryText}
               onChange={(e) => setQueryText(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder='Type what you think AI sees – "a happy person", "wearing glasses" – and see if it agrees'
+              placeholder='Describe what you see — "a happy person", "holding a phone"...'
               style={{
                 flex: 1, padding: '9px 14px', fontSize: '13px', fontFamily: 'inherit',
                 background: '#f8f9fa', border: '1.5px solid #e5e7eb',
