@@ -2,6 +2,10 @@
 
 A real-time visualization of how AI vision models perceive you. CLIP ViT-B/16 runs entirely in your browser - no server, no data leaves your device.
 
+
+https://github.com/user-attachments/assets/d2746dd4-c4b9-4965-8963-7256a057b1c3
+
+
 ## What it does
 
 Your webcam feed is processed by OpenAI's CLIP model every 1.5 seconds, producing a 512-dimensional embedding vector - the actual numbers that represent "you" to the AI. The fullscreen display shows these numbers overlaid on your silhouette, with your body highlighted as a colored heatmap.
